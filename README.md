@@ -1,37 +1,27 @@
-# Kişisel Portföy Sitesi
+# Süleyman DERE - Kişisel Portföy Sitesi
 
-Bu proje, kişisel portföy ve tanıtım amaçlı oluşturulmuş bir web sitesidir.
+Bu repository, kişisel portföy websitemi içermektedir. Site canlı olarak [https://suleymandere.github.io/](https://suleymandere.github.io/) adresinde görüntülenebilir.
+
+## Özellikler
+
+- Responsive tasarım
+- Türkçe/İngilizce dil desteği
+- Animasyonlu arayüz
+- Particles.js arka plan efekti
+- SEO optimizasyonu
+- Sosyal medya entegrasyonu
 
 ## Teknolojiler
 
 - HTML5
 - CSS3
+- JavaScript
+- Particles.js
+- Font Awesome
 
-## Proje Yapısı
+## İletişim
 
-```
-.
-├── index.html          # Ana sayfa
-├── css/               
-│   └── style.css      # Stil dosyası
-├── images/            # Görseller için klasör
-└── js/                # JavaScript dosyaları için klasör
-```
-
-## Özellikler
-
-- Responsive tasarım (mobil uyumlu)
-- Modern ve şık arayüz
-- Kolay özelleştirilebilir yapı
-- Hızlı yükleme süreleri
-
-## Kurulum
-
-1. Projeyi bilgisayarınıza indirin
-2. `index.html` dosyasını bir web tarayıcısında açın
-
-## Özelleştirme
-
-1. `index.html` dosyasından içerikleri düzenleyebilirsiniz
-2. `css/style.css` dosyasından stilleri özelleştirebilirsiniz
-3. `images/` klasörüne kendi görsellerinizi ekleyebilirsiniz 
+- WhatsApp: [+90 538 665 32 50](https://wa.me/905386653250)
+- Instagram: [@_sdere_](https://instagram.com/_sdere_)
+- YouTube: [@SDere](https://www.youtube.com/@SDere)
+- E-posta: [nevnak50@gmail.com](mailto:nevnak50@gmail.com) 
