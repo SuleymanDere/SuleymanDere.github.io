@@ -31,13 +31,18 @@
     <!-- Header Bölümü -->
     <header>
         <div class="language-switch">
-            <button class="lang-btn">TR / EN</button>
+            <button class="lang-btn" onclick="toggleLanguage()">TR / EN</button>
         </div>
-        <nav>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="nav-menu">
             <ul>
-                <li><a href="#anasayfa">Ana Sayfa</a></li>
-                <li><a href="#hakkimda">Hakkımda</a></li>
-                <li><a href="#yetenekler">Yetenekler & Çalışma Alanları</a></li>
+                <li><a href="#anasayfa" data-i18n="nav_home">Ana Sayfa</a></li>
+                <li><a href="#hakkimda" data-i18n="nav_about">Hakkımda</a></li>
+                <li><a href="#yetenekler" data-i18n="nav_skills">Yetenekler & Çalışma Alanları</a></li>
             </ul>
         </nav>
     </header>
@@ -46,36 +51,38 @@
     <section id="anasayfa">
         <div id="particles-js"></div>
         <div class="hero-content">
-            <h1>Merhaba, Ben Süleyman DERE</h1>
-            <p class="hero-subtitle">Full Stack Developer</p>
+            <h1>
+                <span class="greeting" data-i18n="greeting">Merhaba</span>
+                <span class="intro" data-i18n="intro">Ben</span>
+                <span class="name" data-i18n="name">Süleyman DERE</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="subtitle">Full Stack Developer</p>
             <div class="hero-description">
-                <p>Yazılım Geliştirici & Problem Çözücü</p>
+                <p data-i18n="description">Yazılım Geliştirici & Problem Çözücü</p>
             </div>
             <div class="hero-buttons">
-                <a href="#yetenekler" class="hero-btn">Yetenekler & Çalışma Alanları</a>
+                <a href="#yetenekler" class="hero-btn" data-i18n="cta_button">Yetenekler & Çalışma Alanları</a>
             </div>
         </div>
     </section>
 
     <!-- Hakkımda Bölümü -->
     <section id="hakkimda">
-        <h2 class="fade-in-up">Hakkımda</h2>
-        <p class="fade-in-left">Merhaba! Ben yazılımla ilgilenmeye hobi olarak başlamış, öğrenmeyi ve üretmeyi seven biriyim. Çocukluğumdan beri bilgisayarlara büyük bir ilgi duydum. İlk başta oyun oynayarak başlayan bu serüven, zamanla bilgisayarın nasıl çalıştığını ve yazılımın gücünü öğrenme tutkusuna dönüştü.</p>
-        
-        <p class="fade-in-right">Bilgisayarlar, benim için sadece bir araç değil, aynı zamanda sınırsız bir keşif dünyası. Donanım ve yazılımın uyum içinde çalışmasını anlamak, yeni şeyler denemek ve projeler oluşturmak benim için büyük bir keyif.</p>
-        
-        <p class="fade-in-left">Problem çözme, algoritmik düşünme ve projelerimi hayata geçirme süreçleri beni motive ediyor. Boş zamanlarımda yeni programlama dilleri öğreniyor ve bu dünyada kendimi daha ileriye taşımaya çalışıyorum.</p>
-
-        <p class="fade-in-right">Hedefim, bu tutkumu profesyonel bir kariyere dönüştürmek ve yazılım dünyasında kendime sağlam bir yer edinmek.</p>
+        <h2 class="fade-in-up" data-i18n="about_title">Hakkımda</h2>
+        <p class="fade-in-left" data-i18n="about_p1">Merhaba! Ben yazılımla ilgilenmeye hobi olarak başlamış, öğrenmeyi ve üretmeyi seven biriyim...</p>
+        <p class="fade-in-right" data-i18n="about_p2">Bilgisayarlar, benim için sadece bir araç değil, aynı zamanda sınırsız bir keşif dünyası...</p>
+        <p class="fade-in-left" data-i18n="about_p3">Problem çözme, algoritmik düşünme ve projelerimi hayata geçirme süreçleri beni motive ediyor...</p>
+        <p class="fade-in-right" data-i18n="about_p4">Hedefim, bu tutkumu profesyonel bir kariyere dönüştürmek...</p>
     </section>
 
-    <!-- Yetenekler ve Çalışma Alanları Bölümü -->
+    <!-- Yetenekler Bölümü -->
     <section id="yetenekler">
-        <h2 class="fade-in-up">Yetenekler & Çalışma Alanları</h2>
+        <h2 class="fade-in-up" data-i18n="skills_title">Yetenekler & Çalışma Alanları</h2>
         <div class="yetenekler-container">
+            <!-- Frontend Card -->
             <div class="yetenek-card fade-in-up">
-                <h3>Frontend Teknolojileri</h3>
-                <p>Web arayüz geliştirme için temel teknolojiler</p>
+                <h3 data-i18n="frontend_title">Frontend Teknolojileri</h3>
+                <p data-i18n="frontend_desc">Web arayüz geliştirme için temel teknolojiler</p>
                 <div class="teknolojiler">
                     <span>HTML5</span>
                     <span>CSS3</span>
@@ -84,9 +91,10 @@
                 </div>
             </div>
             
+            <!-- Mobile Card -->
             <div class="yetenek-card fade-in-up">
-                <h3>Mobil Geliştirme</h3>
-                <p>Cross-platform mobil uygulama geliştirme araçları</p>
+                <h3 data-i18n="mobile_title">Mobil Geliştirme</h3>
+                <p data-i18n="mobile_desc">Cross-platform mobil uygulama geliştirme araçları</p>
                 <div class="teknolojiler">
                     <span>React Native</span>
                     <span>JavaScript</span>
@@ -94,9 +102,10 @@
                 </div>
             </div>
             
+            <!-- Backend Card -->
             <div class="yetenek-card fade-in-up">
-                <h3>Backend & Otomasyon</h3>
-                <p>Sunucu tarafı programlama ve otomasyon araçları</p>
+                <h3 data-i18n="backend_title">Backend & Otomasyon</h3>
+                <p data-i18n="backend_desc">Sunucu tarafı programlama ve otomasyon araçları</p>
                 <div class="teknolojiler">
                     <span>Python</span>
                     <span>Git</span>
@@ -104,9 +113,10 @@
                 </div>
             </div>
             
+            <!-- Data Science Card -->
             <div class="yetenek-card fade-in-up">
-                <h3>Veri Bilimi Araçları</h3>
-                <p>Veri analizi ve görselleştirme kütüphaneleri</p>
+                <h3 data-i18n="datascience_title">Veri Bilimi Araçları</h3>
+                <p data-i18n="datascience_desc">Veri analizi ve görselleştirme kütüphaneleri</p>
                 <div class="teknolojiler">
                     <span>Pandas</span>
                     <span>NumPy</span>
@@ -114,9 +124,10 @@
                 </div>
             </div>
             
+            <!-- UI/UX Card -->
             <div class="yetenek-card fade-in-up">
-                <h3>UI/UX Tasarım</h3>
-                <p>Kullanıcı arayüzü tasarım yazılımları</p>
+                <h3 data-i18n="uiux_title">UI/UX Tasarım</h3>
+                <p data-i18n="uiux_desc">Kullanıcı arayüzü tasarım yazılımları</p>
                 <div class="teknolojiler">
                     <span>Figma</span>
                     <span>Adobe XD</span>
@@ -124,9 +135,10 @@
                 </div>
             </div>
             
+            <!-- AI/ML Card -->
             <div class="yetenek-card fade-in-up">
-                <h3>Yapay Zeka & ML</h3>
-                <p>Makine öğrenimi ve yapay zeka kütüphaneleri</p>
+                <h3 data-i18n="ai_title">Yapay Zeka & ML</h3>
+                <p data-i18n="ai_desc">Makine öğrenimi ve yapay zeka kütüphaneleri</p>
                 <div class="teknolojiler">
                     <span>TensorFlow</span>
                     <span>Scikit-learn</span>
@@ -134,17 +146,61 @@
                 </div>
             </div>
         </div>
-        <p class="gelecek-projeler fade-in-up">Yakında burada heyecan verici projelerimi paylaşacağım. Şu anda aktif olarak yeni projeler üzerinde çalışıyorum.</p>
+        <p class="gelecek-projeler fade-in-up" data-i18n="future_projects">Yakında burada heyecan verici projelerimi paylaşacağım. Şu anda aktif olarak yeni projeler üzerinde çalışıyorum.</p>
     </section>
 
-    <!-- Footer Bölümü -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Tüm Hakları Saklıdır</p>
+        <p>&copy; 2024 <span data-i18n="copyright">Tüm Hakları Saklıdır</span></p>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/translations.js"></script>
     <script>
+        // Dil değiştirme fonksiyonu
+        let currentLang = 'tr';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'tr' ? 'en' : 'tr';
+            document.documentElement.lang = currentLang;
+            updateContent();
+        }
+
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                element.textContent = translations[currentLang][key];
+            });
+        }
+
+        // Hamburger menü işlevselliği
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.nav-menu');
+        const bars = document.querySelectorAll('.bar');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Animasyonlu X işareti
+            bars[0].style.transform = navMenu.classList.contains('active') ? 
+                'rotate(45deg) translate(8px, 8px)' : '';
+            bars[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
+            bars[2].style.transform = navMenu.classList.contains('active') ? 
+                'rotate(-45deg) translate(7px, -7px)' : '';
+        });
+
+        // Menü linklerine tıklandığında menüyü kapat
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                bars.forEach(bar => {
+                    bar.style.transform = '';
+                    bar.style.opacity = '1';
+                });
+            });
+        });
+
         // Particles.js konfigürasyonu
         particlesJS('particles-js', {
             particles: {

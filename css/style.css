@@ -155,11 +155,44 @@ section h2 span {
 #anasayfa h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+}
+
+#anasayfa h1 span {
+    display: block;
     background: linear-gradient(45deg, #00a8ff, #00ff88);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     animation: gradientText 3s ease infinite;
+}
+
+#anasayfa h1 .greeting {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+#anasayfa h1 .intro {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+#anasayfa h1 .name {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    #anasayfa h1 .greeting {
+        font-size: 3rem;
+    }
+    
+    #anasayfa h1 .intro {
+        font-size: 3rem;
+    }
+    
+    #anasayfa h1 .name {
+        font-size: 3rem;
+    }
 }
 
 .hero-subtitle {
@@ -470,4 +503,57 @@ html {
     line-height: 1.8;
     padding: 1rem;
     border-top: 1px solid rgba(0, 168, 255, 0.1);
+}
+
+/* Hamburger Menü */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #00a8ff;
+    margin: 5px 0;
+    transition: 0.4s;
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #2d2d2d;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .language-switch {
+        right: 20px;
+    }
 } 
