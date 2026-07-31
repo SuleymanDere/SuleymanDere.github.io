@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ürünler - HAVAC</title>
-    <meta name="description" content="HAVAC endüstriyel fan, hava perdesi, duman tahliye fanı ve klima santrali ürünleri.">
+    <meta name="description" content="HAVAC sıcak hava apareyleri, fancoil, aspiratör, plug fan, salyangoz fan, ısı geri kazanım cihazı, klima santrali ve havuz tipi nem alma santrali ürünleri.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">HAVAC</a>
+            <a href="index.html" class="logo" aria-label="HAVAC Ana Sayfa"><img src="assets/img/logo.png" alt="HAVAC Havalandırma Cihazları logosu"></a>
             <ul class="nav-links">
                 <li><a href="index.html">Ana Sayfa</a></li>
                 <li><a href="hakkimizda.html">Hakkımızda</a></li>
@@ -20,6 +20,7 @@
                 <li><a href="cozumler.html">Sektör Çözümleri</a></li>
                 <li><a href="projeler.html">Projeler</a></li>
                 <li><a href="destek.html">Teknik Destek</a></li>
+                <li><a href="randevu.html">Randevu</a></li>
                 <li><a href="iletisim.html">İletişim</a></li>
             </ul>
             <div class="hamburger"><span></span><span></span><span></span></div>
@@ -29,7 +30,7 @@
     <section class="page-header">
         <div class="container">
             <h1>Ürünlerimiz</h1>
-            <p>Endüstriyel ve ticari uygulamalar için geniş ürün yelpazemiz</p>
+            <p>Endüstriyel ve ticari uygulamalar için havalandırma, iklimlendirme ve enerji verimli sistem çözümleri sunuyoruz</p>
         </div>
     </section>
 
@@ -37,22 +38,77 @@
         <div class="container">
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">Tümü</button>
-                <button class="filter-btn" data-filter="fan">Endüstriyel Fanlar</button>
-                <button class="filter-btn" data-filter="perde">Hava Perdeleri</button>
-                <button class="filter-btn" data-filter="duman">Duman Tahliye</button>
-                <button class="filter-btn" data-filter="klima">Klima Santralleri</button>
+                <button class="filter-btn" data-filter="aparey">Sıcak Hava Apareyleri</button>
+                <button class="filter-btn" data-filter="fan">Fan &amp; Aspiratörler</button>
+                <button class="filter-btn" data-filter="santral">Klima Santralleri</button>
+                <button class="filter-btn" data-filter="ozel">Özel Sistemler</button>
             </div>
 
             <div class="product-list">
+                <!-- CAP Serisi Aksiyel Sıcak Hava Apareyi -->
+                <div class="product-item" data-category="aparey">
+                    <div class="product-img"><img src="https://www.havac.net/upload/resimler/urun/aksiyaltipaparey-01.jpg" alt="CAP Serisi Aksiyel Sıcak Hava Apareyi"></div>
+                    <div class="product-info">
+                        <h3>CAP Serisi Aksiyel Sıcak Hava Apareyi</h3>
+                        <p class="product-desc">Fabrikalar, depolar, hangarlar, atölyeler, iş merkezleri ve spor salonları gibi büyük hacimli yerlerin ısıtılmasında kullanılan aksiyel fanlı sıcak hava apareyi. 90°C/70°C sıcak su çalışma şartlarına uygun 4.000-25.000 kcal/h aralığında imal edilir.</p>
+                        <ul class="product-specs">
+                            <li><i class="fas fa-check"></i> Isıtma kapasitesi: 4.070 - 24.500 kcal/h</li>
+                            <li><i class="fas fa-check"></i> Hava debisi: 1.000 - 2.700 m³/h</li>
+                            <li><i class="fas fa-check"></i> Hareketli veya sabit panjurlu modeller</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Teknik Katalog</a>
+                            <a href="iletisim.html" class="btn btn-primary">Teklif Al</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAP-R Serisi Radyal Sıcak Hava Apareyi -->
+                <div class="product-item" data-category="aparey">
+                    <div class="product-img"><img src="https://www.havac.net/upload/resimler/urun/radyalaparey-01.jpg" alt="CAP-R Serisi Radyal Sıcak Hava Apareyi"></div>
+                    <div class="product-info">
+                        <h3>CAP-R Serisi Radyal Sıcak Hava Apareyi</h3>
+                        <p class="product-desc">Büyük hacimli ve yüksekliği fazla mekanların ısıtılması için radyal fanlı sıcak hava apareyi. Radyal fanlar sayesinde ısıtılmış hava uzak mesafelere atılabilir. 90°C/70°C sıcak su şartlarında 5.000-50.000 kcal/h aralığında üretilir.</p>
+                        <ul class="product-specs">
+                            <li><i class="fas fa-check"></i> Isıtma kapasitesi: 7.000 - 45.000 kcal/h</li>
+                            <li><i class="fas fa-check"></i> Hava debisi: 1.400 - 4.000 m³/h</li>
+                            <li><i class="fas fa-check"></i> Sıcak su, buhar veya kaynar su ile çalışabilir</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Teknik Katalog</a>
+                            <a href="iletisim.html" class="btn btn-primary">Teklif Al</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C-FC Fancoil -->
+                <div class="product-item" data-category="santral">
+                    <div class="product-img"><img src="https://www.havac.net/upload/resimler/urun/C-Fc-fancoil.jpg" alt="C-FC Serisi Yüksek Basınçlı Fancoil"></div>
+                    <div class="product-info">
+                        <h3>C-FC Serisi Yüksek Basınçlı Fancoil</h3>
+                        <p class="product-desc">Soğutma ya da ısıtma suyunun bulunduğu sistemlere uygulanabilen yüksek basınçlı fancoil cihazı. 2 borulu veya 4 borulu sistemlere uygun tasarlanır, tavan arası uygulamalarda montaj kolaylığı sağlar.</p>
+                        <ul class="product-specs">
+                            <li><i class="fas fa-check"></i> Soğutma kapasitesi: 5,2 - 25,2 kW</li>
+                            <li><i class="fas fa-check"></i> Hava debisi: 1.000 - 5.000 m³/h</li>
+                            <li><i class="fas fa-check"></i> Yıkanabilir EU3 sınıfı filtreler</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Teknik Katalog</a>
+                            <a href="iletisim.html" class="btn btn-primary">Teklif Al</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CFM Mutfak Aspiratörü -->
                 <div class="product-item" data-category="fan">
-                    <div class="product-img"><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop" alt="Axial Fan"></div>
+                    <div class="product-img"><img src="https://www.havac.net/upload/resimler/urun/cfm-fan-01.jpg" alt="CFM Serisi Mutfak Aspiratörü"></div>
                     <div class="product-info">
-                        <h3>[Ürün Adı]</h3>
-                        <p class="product-desc">[Ürün açıklamasını buraya yazın. Örnek: Yüksek verimli axial fan, düşük enerji tüketimi.]</p>
+                        <h3>CFM Serisi Mutfak Aspiratörü</h3>
+                        <p class="product-desc">Alışveriş merkezleri, restoranlar, atölyeler, fabrikalar ve tekstil atölyelerinde sıkça kullanılan aspiratör serisi. Radyal geriye eğik seyrek kanatlı fanlarla 11 farklı modelde üretilir.</p>
                         <ul class="product-specs">
-                            <li><i class="fas fa-check"></i> [Özellik 1]</li>
-                            <li><i class="fas fa-check"></i> [Özellik 2]</li>
-                            <li><i class="fas fa-check"></i> [Özellik 3]</li>
+                            <li><i class="fas fa-check"></i> Hava debisi: 3.000 - 50.000 m³/h</li>
+                            <li><i class="fas fa-check"></i> Statik basınç: 450 - 500 Pa</li>
+                            <li><i class="fas fa-check"></i> IE2 enerji verim sınıfı motorlar</li>
                         </ul>
                         <div class="product-actions">
                             <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Teknik Katalog</a>
@@ -61,15 +117,16 @@
                     </div>
                 </div>
 
+                <!-- CF Hücreli Aspiratör -->
                 <div class="product-item" data-category="fan">
-                    <div class="product-img"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop" alt="Radial Fan"></div>
+                    <div class="product-img"><img src="https://www.havac.net/upload/resimler/urun/cf-fan-01.jpg" alt="CF Serisi Hücreli Aspiratör"></div>
                     <div class="product-info">
-                        <h3>[Ürün Adı]</h3>
-                        <p class="product-desc">[Ürün açıklamasını buraya yazın.]</p>
+                        <h3>CF Serisi Hücreli Aspiratör</h3>
+                        <p class="product-desc">Alışveriş merkezleri, ofisler, üretim mahalleri, hastaneler, otoparklar ve kafeteryalarda yoğun olarak kullanılan hücreli aspiratör. Çift emişli radyal öne eğik sık kanatlı fanlarla 12 farklı modelde üretilir.</p>
                         <ul class="product-specs">
-                            <li><i class="fas fa-check"></i> [Özellik 1]</li>
-                            <li><i class="fas fa-check"></i> [Özellik 2]</li>
-                            <li><i class="fas fa-check"></i> [Özellik 3]</li>
+                            <li><i class="fas fa-check"></i> Hava debisi: 3.000 - 60.000 m³/h</li>
+                            <li><i class="fas fa-check"></i> Statik basınç: 450 - 500 Pa</li>
+                            <li><i class="fas fa-check"></i> Çift cidarlı, izolasyonlu gövde</li>
                         </ul>
                         <div class="product-actions">
                             <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Teknik Katalog</a>
@@ -78,15 +135,16 @@
                     </div>
                 </div>
 
-                <div class="product-item" data-category="perde">
-                    <div class="product-img"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" alt="Hava Perdesi"></div>
+                <!-- CFM-P Plug Fan -->
+                <div class="product-item" data-category="fan">
+                    <div class="product-img"><img src="https://www.havac.net/upload/resimler/urun/cfm-p-plugfan-01.jpg" alt="CFM-P Serisi Plug Fan"></div>
                     <div class="product-info">
-                        <h3>[Ürün Adı]</h3>
-                        <p class="product-desc">[Ürün açıklamasını buraya yazın.]</p>
+                        <h3>CFM-P Serisi Plug Fan</h3>
+                        <p class="product-desc">Mutfaklarda, yemekhanelerde, üretim ve tozlu mahallerde kullanılan plug fanlı aspiratör serisi. Kayış-kasnak tahrikli sistemlere göre daha verimli ve düşük enerji sarfiyatlıdır, 13 farklı modelde üretilir.</p>
                         <ul class="product-specs">
-                            <li><i class="fas fa-check"></i> [Özellik 1]</li>
-                            <li><i class="fas fa-check"></i> [Özellik 2]</li>
-                            <li><i class="fas fa-check"></i> [Özellik 3]</li>
+                            <li><i class="fas fa-check"></i> Hava debisi: 1.000 - 30.000 m³/h</li>
+                            <li><i class="fas fa-check"></i> Motor doğrudan fan aksına bağlı</li>
+                            <li><i class="fas fa-check"></i> Düşük enerji kaybı, uzun ömür</li>
                         </ul>
                         <div class="product-actions">
                             <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Teknik Katalog</a>
@@ -95,15 +153,16 @@
                     </div>
                 </div>
 
-                <div class="product-item" data-category="duman">
-                    <div class="product-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop" alt="Duman Tahliye Fanı"></div>
+                <!-- CS Salyangoz Fan -->
+                <div class="product-item" data-category="fan">
+                    <div class="product-img"><img src="https://www.havac.net/upload/resimler/urun/salyangozfan-01.jpg" alt="CS Serisi Salyangoz Fan"></div>
                     <div class="product-info">
-                        <h3>[Ürün Adı]</h3>
-                        <p class="product-desc">[Ürün açıklamasını buraya yazın.]</p>
+                        <h3>CS Serisi Salyangoz Fan</h3>
+                        <p class="product-desc">Lokanta mutfakları, yemekhaneler, marangozhaneler, dökümhaneler, kaynakhaneler, fabrikalar, maden ocakları ve tekstil atölyelerinde yoğun kullanılan salyangoz fan serisi, 12 farklı modelde üretilir.</p>
                         <ul class="product-specs">
-                            <li><i class="fas fa-check"></i> [Özellik 1]</li>
-                            <li><i class="fas fa-check"></i> [Özellik 2]</li>
-                            <li><i class="fas fa-check"></i> [Özellik 3]</li>
+                            <li><i class="fas fa-check"></i> Hava debisi: 2.000 - 50.000 m³/h</li>
+                            <li><i class="fas fa-check"></i> Statik basınç: 350 - 2.000 Pa</li>
+                            <li><i class="fas fa-check"></i> CNC kesim, kaynaklı dayanıklı gövde</li>
                         </ul>
                         <div class="product-actions">
                             <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Teknik Katalog</a>
@@ -112,15 +171,52 @@
                     </div>
                 </div>
 
-                <div class="product-item" data-category="klima">
-                    <div class="product-img"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop" alt="Klima Santrali"></div>
+                <!-- C-HRV Isı Geri Kazanım Cihazı -->
+                <div class="product-item" data-category="ozel">
+                    <div class="product-img"><img src="https://www.havac.net/upload/resimler/urun/igk-isigerikazanim01.jpg" alt="C-HRV Serisi Isı Geri Kazanım Cihazı"></div>
                     <div class="product-info">
-                        <h3>[Ürün Adı]</h3>
-                        <p class="product-desc">[Ürün açıklamasını buraya yazın.]</p>
+                        <h3>C-HRV Serisi Isı Geri Kazanım Cihazı</h3>
+                        <p class="product-desc">Taze hava gereksinimi duyan iç ortamlarda izole edilmiş ısının havalandırma sırasında dışarı aktarılmasını en aza indiren, tersinir çalışabilen ısı geri kazanım cihazı. %60-70 verimlilikle %25-30 enerji tasarrufu sağlar.</p>
                         <ul class="product-specs">
-                            <li><i class="fas fa-check"></i> [Özellik 1]</li>
-                            <li><i class="fas fa-check"></i> [Özellik 2]</li>
-                            <li><i class="fas fa-check"></i> [Özellik 3]</li>
+                            <li><i class="fas fa-check"></i> Hava debisi: 500 - 5.200 m³/h</li>
+                            <li><i class="fas fa-check"></i> Verimlilik: %55 - %62</li>
+                            <li><i class="fas fa-check"></i> Temizlenebilir G4 hava filtrasyonu</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Teknik Katalog</a>
+                            <a href="iletisim.html" class="btn btn-primary">Teklif Al</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KSC Klima Santralleri -->
+                <div class="product-item" data-category="santral">
+                    <div class="product-img"><img src="https://www.havac.net/upload/resimler/urun/ksc-filtresantrali02.jpg" alt="KSC Serisi Klima Santralleri"></div>
+                    <div class="product-info">
+                        <h3>KSC Serisi Klima Santralleri</h3>
+                        <p class="product-desc">Oteller, hastaneler, alışveriş merkezleri, büyük spor salonları ve iş merkezleri gibi geniş bir yelpazede kullanılan klima santralleri. %100 taze havalı, karışım havalı veya ısı geri kazanım hücreli konfigürasyonlarda üretilir.</p>
+                        <ul class="product-specs">
+                            <li><i class="fas fa-check"></i> Hava debisi: 1.500 - 75.000 m³/h</li>
+                            <li><i class="fas fa-check"></i> Soğutma: 19 - 650 kW, Isıtma: 38 - 1.230 kW</li>
+                            <li><i class="fas fa-check"></i> Bilgisayar destekli fan ve batarya seçimi</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Teknik Katalog</a>
+                            <a href="iletisim.html" class="btn btn-primary">Teklif Al</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PLC Havuz Tipi Nem Alma Santrali -->
+                <div class="product-item" data-category="ozel">
+                    <div class="product-img"><img src="https://www.havac.net/upload/resimler/urun/nemalma-klimasantrali-01.jpg" alt="PLC Serisi Havuz Tipi Nem Alma Santrali"></div>
+                    <div class="product-info">
+                        <h3>PLC Serisi Havuz Tipi Nem Alma Santrali</h3>
+                        <p class="product-desc">Kapalı yüzme havuzlarındaki yüksek nem oranını istenilen seviyeye çeken nem alma santrali. Nemi alınmış hava kesinlikle dışarı atılmaz, ısı geri kazanım sistemiyle enerji sarfiyatı minimuma indirilir.</p>
+                        <ul class="product-specs">
+                            <li><i class="fas fa-check"></i> Nem alma kapasitesi: 15 - 118 kg/h</li>
+                            <li><i class="fas fa-check"></i> Hava debisi: 3.000 - 21.200 m³/h</li>
+                            <li><i class="fas fa-check"></i> Isı geri kazanım bataryası dahil</li>
                         </ul>
                         <div class="product-actions">
                             <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Teknik Katalog</a>
@@ -139,10 +235,7 @@
                     <h3>HAVAC</h3>
                     <p>Uluslararası standartlarda havalandırma ve iklimlendirme çözümleri.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/dere.works/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -165,9 +258,9 @@
                 </div>
                 <div class="footer-col">
                     <h4>İletişim</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> [Adresinizi Yazın]</p>
-                    <p><i class="fas fa-phone"></i> [Telefon Numaranız]</p>
-                    <p><i class="fas fa-envelope"></i> [E-posta Adresiniz]</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+902164971725">+90 (216) 497 17 25</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@havac.net">info@havac.net</a></p>
+                    <p><a href="https://havac.net/iletisim.asp" target="_blank" rel="noopener noreferrer">İletişim bilgileri</a></p>
                 </div>
             </div>
             <div class="footer-bottom"><p>&copy; 2026 HAVAC. Tüm hakları saklıdır.</p></div>

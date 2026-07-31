@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevu ve İş Planlama - HAVAC</title>
+    <meta name="description" content="Cizim yapilacak urun, kesilecek urun ve teknik planlama talepleri icin randevu olusturma sayfasi.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="HAVAC Ana Sayfa"><img src="assets/img/logo.png" alt="HAVAC Havalandirma Cihazlari logosu"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkimizda</a></li>
+                <li><a href="urunler.html">Urunler</a></li>
+                <li><a href="cozumler.html">Sektor Cozumleri</a></li>
+                <li><a href="projeler.html">Projeler</a></li>
+                <li><a href="destek.html">Teknik Destek</a></li>
+                <li><a href="randevu.html" class="active">Randevu</a></li>
+                <li><a href="iletisim.html">Iletisim</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Randevu ve Is Planlama</h1>
+            <p>Cizim yapilacak urun, kesilecek urun ve teknik surecleriniz icin randevu olusturun</p>
+        </div>
+    </section>
+
+    <section class="appointment-section">
+        <div class="container">
+            <div class="appointment-layout">
+                <div class="appointment-form-box">
+                    <h2>Yeni Randevu Olustur</h2>
+                    <form id="appointment-form" class="appointment-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customer-name">Musteri Adi *</label>
+                                <input type="text" id="customer-name" name="customerName" required placeholder="Ad Soyad / Firma">
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-phone">Telefon *</label>
+                                <input type="tel" id="customer-phone" name="customerPhone" required placeholder="05XX XXX XX XX">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="job-type">Islem Turu *</label>
+                                <select id="job-type" name="jobType" required>
+                                    <option value="">Seciniz</option>
+                                    <option value="Cizim Yapilacak Urun">Cizim Yapilacak Urun</option>
+                                    <option value="Kesilecek Urun">Kesilecek Urun</option>
+                                    <option value="Revizyon">Revizyon</option>
+                                    <option value="Teknik Gorusme">Teknik Gorusme</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="product-name">Urun / Proje Adi *</label>
+                                <input type="text" id="product-name" name="productName" required placeholder="Orn: Menfez Sac Cizimi">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="appointment-date">Tarih *</label>
+                                <input type="date" id="appointment-date" name="appointmentDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="appointment-time">Saat *</label>
+                                <input type="time" id="appointment-time" name="appointmentTime" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="priority">Oncelik</label>
+                            <select id="priority" name="priority">
+                                <option value="Normal">Normal</option>
+                                <option value="Yuksek">Yuksek</option>
+                                <option value="Acil">Acil</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Aciklama</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Olculer, teknik notlar, teslim hedefi vb."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-calendar-check"></i> Randevu Kaydet</button>
+                        <p id="appointment-feedback" class="appointment-feedback" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <div class="appointment-list-box">
+                    <div class="appointment-list-head">
+                        <h2>Planlanan Randevular</h2>
+                        <button id="clear-appointments" type="button" class="btn btn-outline btn-sm">Tumunu Temizle</button>
+                    </div>
+                    <div id="appointment-list" class="appointment-list"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>HAVAC</h3>
+                    <p>Uluslararasi standartlarda havalandirma ve iklimlendirme cozumleri.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/dere.works/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizli Linkler</h4>
+                    <ul>
+                        <li><a href="hakkimizda.html">Hakkimizda</a></li>
+                        <li><a href="urunler.html">Urunler</a></li>
+                        <li><a href="cozumler.html">Sektor Cozumleri</a></li>
+                        <li><a href="projeler.html">Projeler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Destek</h4>
+                    <ul>
+                        <li><a href="destek.html">Teknik Destek</a></li>
+                        <li><a href="destek.html">Kataloglar</a></li>
+                        <li><a href="destek.html">SSS</a></li>
+                        <li><a href="iletisim.html">Bayi Basvurusu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Iletisim</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Yavuz Selim Mah. M. Aksa Cad. Cihat Sk. No:60-66, Sultanbeyli / Istanbul</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+902164971725">+90 (216) 497 17 25</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@havac.net">info@havac.net</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 HAVAC. Tum haklari saklidir.</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

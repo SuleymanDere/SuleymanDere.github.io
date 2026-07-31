@@ -56,11 +56,15 @@ body {
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
-    letter-spacing: -1px;
+}
+
+.logo img {
+    display: block;
+    height: 48px;
+    width: auto;
 }
 
 .nav-links {
@@ -71,32 +75,36 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 14px;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    padding: 8px 10px;
+    border-radius: 8px;
     transition: var(--transition);
     position: relative;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--primary);
+    color: var(--primary-dark);
+    background: var(--primary-light);
 }
 
 .nav-links a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
-    left: 0;
+    bottom: -3px;
+    left: 10px;
     width: 0;
-    height: 2px;
+    height: 3px;
     background: var(--primary);
     transition: var(--transition);
 }
 
 .nav-links a:hover::after,
 .nav-links a.active::after {
-    width: 100%;
+    width: calc(100% - 20px);
 }
 
 .hamburger {
@@ -1232,19 +1240,17 @@ footer {
 .map-placeholder {
     background: var(--white);
     border-radius: var(--radius);
-    padding: 60px;
+    padding: 12px;
     text-align: center;
     box-shadow: var(--shadow);
 }
 
-.map-placeholder i {
-    font-size: 3rem;
-    color: var(--primary);
-    margin-bottom: 15px;
-}
-
-.map-placeholder p {
-    color: var(--gray);
+.map-placeholder iframe {
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+    border-radius: var(--radius);
+    min-height: 420px;
 }
 
 /* Dealer */
@@ -1270,6 +1276,123 @@ footer {
     border-radius: var(--radius);
 }
 
+/* Appointment */
+.appointment-section {
+    padding: 60px 20px 80px;
+}
+
+.appointment-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.appointment-form-box,
+.appointment-list-box {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px;
+}
+
+.appointment-form-box h2,
+.appointment-list-box h2 {
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+.appointment-feedback {
+    margin-top: 12px;
+    min-height: 20px;
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+}
+
+.appointment-list-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.appointment-list {
+    display: grid;
+    gap: 14px;
+}
+
+.appointment-empty {
+    color: var(--gray);
+    background: var(--light-gray);
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.appointment-card {
+    border: 1px solid #e6ebf0;
+    border-radius: 12px;
+    padding: 14px;
+    background: #fbfdff;
+}
+
+.appointment-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.appointment-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.appointment-meta {
+    display: grid;
+    gap: 4px;
+    color: #4a5565;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.appointment-notes {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.appointment-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.status-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.status-beklemede {
+    color: #855a00;
+    background: #fff4cc;
+}
+
+.status-planlandi {
+    color: #0b4c9c;
+    background: #dbeafe;
+}
+
+.status-tamamlandi {
+    color: #166534;
+    background: #dcfce7;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .footer-grid {
@@ -1279,6 +1402,10 @@ footer {
     .about-grid,
     .solution-detail-item,
     .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-layout {
         grid-template-columns: 1fr;
     }
 
@@ -1307,6 +1434,12 @@ footer {
         padding: 20px;
         box-shadow: var(--shadow);
         gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px 12px;
+        display: inline-block;
     }
 
     .nav-links.active {
@@ -1359,6 +1492,10 @@ footer {
         overflow-x: auto;
         flex-wrap: nowrap;
         padding-bottom: 10px;
+    }
+
+    .map-placeholder iframe {
+        min-height: 320px;
     }
 
     .project-grid {
