@@ -67,6 +67,18 @@ body {
     width: auto;
 }
 
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    display: block;
+    height: 40px;
+    width: auto;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
