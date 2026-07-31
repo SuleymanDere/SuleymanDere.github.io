@@ -1,70 +1,82 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Hamburger menü
+document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
     if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+        hamburger.setAttribute('role', 'button');
+        hamburger.setAttribute('tabindex', '0');
+        hamburger.setAttribute('aria-label', 'Menüyü aç');
+        hamburger.setAttribute('aria-expanded', 'false');
+
+        const toggleMenu = () => {
+            const isOpen = navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+            hamburger.setAttribute('aria-label', isOpen ? 'Menüyü kapat' : 'Menüyü aç');
+        };
+
+        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                toggleMenu();
+            }
         });
     }
 
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        const targetId = anchor.getAttribute('href');
+        if (!targetId || targetId === '#') {
+            return;
+        }
+
+        anchor.addEventListener('click', (event) => {
+            const target = document.querySelector(targetId);
             if (target) {
+                event.preventDefault();
                 target.scrollIntoView({
-                    behavior: 'smooth',
+                    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
                     block: 'start'
                 });
             }
         });
     });
 
-    // Navbar scroll efekti
     const navbar = document.querySelector('.navbar');
     if (navbar) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
-            } else {
-                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            }
-        });
+        const updateNavbarShadow = () => {
+            navbar.style.boxShadow = window.scrollY > 50
+                ? '0 4px 20px rgba(0,0,0,0.1)'
+                : '0 2px 10px rgba(0,0,0,0.1)';
+        };
+
+        updateNavbarShadow();
+        window.addEventListener('scroll', updateNavbarShadow, { passive: true });
     }
 
-    // Ürün filtreleme
     const filterBtns = document.querySelectorAll('.filter-btn');
     const productItems = document.querySelectorAll('.product-item');
 
-    filterBtns.forEach(btn => {
+    filterBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
+            filterBtns.forEach((button) => button.classList.remove('active'));
             btn.classList.add('active');
 
             const filter = btn.getAttribute('data-filter');
-
-            productItems.forEach(item => {
-                if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                    item.style.display = 'grid';
-                } else {
-                    item.style.display = 'none';
-                }
+            productItems.forEach((item) => {
+                item.style.display = filter === 'all' || item.getAttribute('data-category') === filter
+                    ? 'grid'
+                    : 'none';
             });
         });
     });
 
-    // FAQ accordion
     const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
+    faqItems.forEach((item) => {
         const question = item.querySelector('.faq-question');
         if (question) {
             question.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
-                faqItems.forEach(i => i.classList.remove('active'));
+                faqItems.forEach((faqItem) => faqItem.classList.remove('active'));
                 if (!isActive) {
                     item.classList.add('active');
                 }
@@ -72,11 +84,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Form gönderim bildirimi
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
+    document.querySelectorAll('form').forEach((form) => {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
             alert('Mesajınız alındı! En kısa sürede size dönüş yapacağız.');
             form.reset();
         });

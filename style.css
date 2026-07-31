@@ -26,6 +26,11 @@ body {
     overflow-x: hidden;
 }
 
+:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 3px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -501,6 +506,15 @@ footer {
 }
 
 .footer-col ul li a:hover {
+    color: var(--white);
+}
+
+.footer-col p a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-col p a:hover {
     color: var(--white);
 }
 
@@ -1372,5 +1386,16 @@ footer {
     .btn {
         padding: 12px 25px;
         font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
